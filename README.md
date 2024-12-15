@@ -15,7 +15,7 @@ Welcome to the Zone, stalker! This web challenge will test your hacking skills i
 1. Clone the repository:
 ```bash
 git clone https://github.com/Morronel/stalker-lab.git
-cd stalker-lab
+cd stalker-lab/stalkerlab
 ```
 
 2. Build and run the container:
