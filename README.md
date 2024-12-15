@@ -35,6 +35,10 @@ Flag is in stalker_ctf{FLAG} format. Good luck, stalker!
 
 This project is released under the MIT License. See the LICENSE file for details.
 
+## Known Issues
+
+Sometimes user interaction on chat step may fail. In such case reboot of container often solves the issue
+
 ## Disclaimer
 
 This is a fan-made CTF challenge inspired by the S.T.A.L.K.E.R. series. All S.T.A.L.K.E.R.-related trademarks and copyrights are property of their respective owners. This project is created for educational purposes only. 
