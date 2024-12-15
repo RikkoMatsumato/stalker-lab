@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STALKER Terminal Interface</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .access-denied {
+            color: #ff0000;
+            font-size: 1.5em;
+            text-align: center;
+            margin: 2em 0;
+            text-shadow: 0 0 10px #ff0000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px #ff0000; }
+            50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+            100% { text-shadow: 0 0 10px #ff0000; }
+        }
+
+        .main-content p {
+            margin-bottom: 1em;
+        }
+    </style>
 </head>
 <body>
     <!-- Дивні сигнали надходять від /monolith... Треба дослідити... -->
@@ -23,17 +43,13 @@
 
             <div class="main-content">
                 <div class="glitch-text">УВАГА: ДОСТУП ОБМЕЖЕНО</div>
-                <p class="typewriter">Виявлено неавторизований доступ до терміналу Моноліту...</p>
-                <p class="blink">Виконується сканування периметру...</p>
+                <p>Виявлено неавторизований доступ до терміналу Моноліту...</p>
+                <p>Виконується сканування периметру...</p>
                 
                 <!-- Стародавні шляхи ведуть до /monolith... Хай буде з нами сила Моноліту... -->
                 
-                <div class="login-prompt">
-                    <p>ВВЕДІТЬ КОДОВУ ФРАЗУ:</p>
-                    <div class="input-line">
-                        <span class="prompt">></span>
-                        <span class="cursor">█</span>
-                    </div>
+                <div class="access-denied">
+                    В ДОСТУПІ ВІДМОВЛЕНО!
                 </div>
             </div>
 
