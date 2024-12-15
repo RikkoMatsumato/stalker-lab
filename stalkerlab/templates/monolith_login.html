@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МОНОЛІТ - Термінал Доступу</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .login-form {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .login-form input {
+            background: var(--terminal-dark);
+            border: 1px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 300px;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+        }
+        .login-form button {
+            background: var(--terminal-green);
+            color: var(--terminal-dark);
+            border: none;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .login-form button:hover {
+            background: var(--terminal-dark);
+            color: var(--terminal-green);
+            border: 1px solid var(--terminal-green);
+        }
+        .monolith-symbol {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            animation: pulse 2s infinite;
+        }
+        .error-message {
+            color: #ff0000;
+            text-align: center;
+            margin: 1rem 0;
+            animation: glitch 0.3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="scanlines"></div>
+        <div class="content">
+            <div class="header">
+                <div class="warning-sign">☢</div>
+                <h1>ТЕРМІНАЛ ДОСТУПУ МОНОЛІТУ</h1>
+                <div class="warning-sign">☢</div>
+            </div>
+            
+            <div class="status-bar">
+                [РІВЕНЬ ДОСТУПУ: НЕВІДОМИЙ] [ОЧІКУВАННЯ АВТЕНТИФІКАЦІЇ]
+            </div>
+
+            <div class="main-content">
+                <div class="monolith-symbol">۞</div>
+                <div class="glitch-text">СИСТЕМА АВТЕНТИФІКАЦІЇ МОНОЛІТУ</div>
+                
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="error-message">
+                                [ПОМИЛКА] {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <form class="login-form" method="POST">
+                    <input type="text" name="username" placeholder="ПОЗИВНИЙ" required>
+                    <input type="password" name="password" placeholder="КОДОВА ФРАЗА" required>
+                    <button type="submit">УВІЙТИ</button>
+                </form>
+
+                <p class="typewriter">Очікування введення облікових даних...</p>
+            </div>
+
+            <div class="footer">
+                <p>[ЗАХИЩЕНА СИСТЕМА МОНОЛІТУ - v2.0.4.5]</p>
+                <!-- todo: add sql protection -->
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

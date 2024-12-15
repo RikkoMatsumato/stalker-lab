@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МОНОЛІТ - Пошук Сталкерів</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .terminal {
+            width: 90%;
+            height: 90vh;
+            max-width: 1200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .admin-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--terminal-green);
+        }
+
+        .admin-nav a {
+            color: var(--terminal-green);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--terminal-green);
+            transition: all 0.3s ease;
+        }
+
+        .admin-nav a:hover {
+            background: var(--terminal-green);
+            color: var(--terminal-dark);
+        }
+
+        .admin-nav a.active {
+            background: var(--terminal-green);
+            color: var(--terminal-dark);
+        }
+
+        .search-container {
+            flex: 1;
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid var(--terminal-green);
+        }
+
+        .search-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-form input {
+            flex-grow: 1;
+            background: var(--terminal-dark);
+            border: 1px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 0.5rem;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+        }
+
+        .search-form button {
+            background: var(--terminal-green);
+            color: var(--terminal-dark);
+            border: none;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background: var(--terminal-dark);
+            color: var(--terminal-green);
+            border: 1px solid var(--terminal-green);
+        }
+
+        .search-results {
+            color: var(--terminal-green);
+            font-family: 'VT323', monospace;
+            white-space: pre-wrap;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="scanlines"></div>
+        <div class="content">
+            <div class="admin-nav">
+                <a href="/monolith/chat">ЧАТ</a>
+                <a href="/monolith/admin/search" class="active">ПОШУК СТАЛКЕРІВ</a>
+            </div>
+
+            <div class="header">
+                <div class="warning-sign">☢</div>
+                <h1>ПОШУК СТАЛКЕРІВ</h1>
+                <div class="warning-sign">☢</div>
+            </div>
+            
+            <div class="status-bar">
+                [АДМІНІСТРАТОР: {{ username }}] [РІВЕНЬ ДОСТУПУ: ПОВНИЙ] [РЕЖИМ: ПОШУК]
+            </div>
+
+            <div class="search-container">
+                <form class="search-form" method="GET">
+                    <input type="text" name="query" placeholder="Введіть ім'я сталкера..." value="{{ request.args.get('query', '') }}">
+                    <button type="submit">ПОШУК</button>
+                </form>
+
+                {{ search_result | safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STALKER Terminal Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Дивні сигнали надходять від /monolith... Треба дослідити... -->
+    <div class="terminal">
+        <div class="scanlines"></div>
+        <div class="content">
+            <div class="header">
+                <div class="warning-sign">☢</div>
+                <h1>МОНОЛІТ ТЕРМІНАЛ v1.0.4</h1>
+                <div class="warning-sign">☢</div>
+            </div>
+            
+            <div class="status-bar">
+                [СТАТУС: АКТИВНИЙ] [РАДІАЦІЯ: ВИСОКА] [АНОМАЛІЇ: ВИЯВЛЕНО]
+            </div>
+
+            <div class="main-content">
+                <div class="glitch-text">УВАГА: ДОСТУП ОБМЕЖЕНО</div>
+                <p class="typewriter">Виявлено неавторизований доступ до терміналу Моноліту...</p>
+                <p class="blink">Виконується сканування периметру...</p>
+                
+                <!-- Стародавні шляхи ведуть до /monolith... Хай буде з нами сила Моноліту... -->
+                
+                <div class="login-prompt">
+                    <p>ВВЕДІТЬ КОДОВУ ФРАЗУ:</p>
+                    <div class="input-line">
+                        <span class="prompt">></span>
+                        <span class="cursor">█</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>[СИСТЕМА МОНОЛІТУ - ТІЛЬКИ ДЛЯ АВТОРИЗОВАНОГО ПЕРСОНАЛУ]</p>
+                <!-- Істинний шлях лежить через /monolith... Лише гідні знайдуть його. -->
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
