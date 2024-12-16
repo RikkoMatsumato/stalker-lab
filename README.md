@@ -35,6 +35,10 @@ Flag is in stalker_ctf{FLAG} format. Good luck, stalker!
 
 This project is released under the MIT License. See the LICENSE file for details.
 
+## Check Out My Telegram Channel
+
+https://t.me/binary_xor
+
 ## Known Issues
 
 Sometimes user interaction on chat step may fail. In such case reboot of container often solves the issue
