@@ -15,13 +15,12 @@ Welcome to the Zone, stalker! This web challenge will test your hacking skills i
 1. Clone the repository:
 ```bash
 git clone https://github.com/Morronel/stalker-lab.git
-cd stalker-lab/stalkerlab
+cd stalker-lab
 ```
 
 2. Build and run the container:
 ```bash
-sudo docker build -t stalker-lab .
-sudo docker run -p 0.0.0.0:5000:5000 stalker-lab
+sudo docker compose up
 ```
 
 3. Access the challenge at:
