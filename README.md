@@ -55,6 +55,8 @@ Thank you Bogdan Shchogolev for testing the challenge and contributing handy doc
 And huge shoutout to GSC. Thanks you, for finally releasing Stalker2 (if you have a friend who works at GSC, share this repo with them plz).
 Thanks guys, I appreciate it :)
 
+## Screenshots
+
 ![image](https://github.com/user-attachments/assets/6375f136-3874-41d1-8f41-37f7976b7233)
 
 ![image](https://github.com/user-attachments/assets/93cb8b66-d240-459c-ba3d-3e56e3b9f472)
