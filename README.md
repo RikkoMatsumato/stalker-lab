@@ -57,7 +57,7 @@ Thanks guys, I appreciate it :)
 
 ## Screenshots
 
-![image](https://github.com/user-attachments/assets/6375f136-3874-41d1-8f41-37f7976b7233)
+![image](https://github.com/user-attachments/assets/705185f6-5c71-4c58-b357-6ef5b6c0e8e5)
 
 ![image](https://github.com/user-attachments/assets/93cb8b66-d240-459c-ba3d-3e56e3b9f472)
 
