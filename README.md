@@ -1,5 +1,7 @@
 # STALKER: Monolith's Web Challenge
 
+## Difficulty: "Stalker"
+
 A FREE and OPEN SOURCE web-based CTF (Capture The Flag) challenge inspired by the S.T.A.L.K.E.R. game series atmosphere. This project is a fan creation and is not affiliated with or endorsed by GSC Game World or the official S.T.A.L.K.E.R. team.
 
 ## Description
@@ -45,6 +47,13 @@ Sometimes user interaction on chat step may fail. In such case reboot of contain
 ## Disclaimer
 
 This is a fan-made CTF challenge inspired by the S.T.A.L.K.E.R. series. All S.T.A.L.K.E.R.-related trademarks and copyrights are property of their respective owners. This project is created for educational purposes only. 
+
+## Credit
+
+Thank you Olex Vel (https://x.com/alex_roqo) for testing the challenge and bringing in his ideas.
+Thank you Bogdan Shchogolev for testing the challenge and contributing handy docker compose launcher.
+And huge shoutout to GSC. Thanks you, for finally releasing Stalker2 (if you have a friend who works at GSC, share this repo with them plz).
+Thanks guys, I appreciate it :)
 
 ![image](https://github.com/user-attachments/assets/6375f136-3874-41d1-8f41-37f7976b7233)
 
